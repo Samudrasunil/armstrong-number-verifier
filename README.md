@@ -7,6 +7,10 @@ Features
   - Personal Dashboard: A dashboard for logged-in users, displaying total numbers found, largest number, and a list of all unique saved armstrong numbers.
   - Global Dashboard: A public dashboard that displays all registered users with extracted usernames for privacy and their collections of unique saved numbers.
   - Search Functionality: The global dashboard includes a dynamic search bar to filter the list by email or number.
+  - Pagination: The Global Dashboard is equipped with backend pagination to efficiently handle large datasets, ensuring the application remains fast and responsive                          regardless of the number of users.
+  - Input Validation: Validation is implemented on both the frontend for immediate user feedback and on the backend for security and data integrity.
+  - API Error Responses: The backend API provides clear and appropriate success or error responses, using standard HTTP status codes to communicate the result of any action.
+  - Secure Input Sanitization: The backend sanitizes user inputs, such as trimming whitespace and converting emails to lowercase, to ensure data integrity.
 
 Technical Stack
   - Backend: Go (Golang)
