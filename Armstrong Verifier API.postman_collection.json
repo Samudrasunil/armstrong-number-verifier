@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "3c2997f8-23ea-4fca-bfa2-87219621f30f",
+		"name": "Armstrong Verifier API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43497386"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"postman.test@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"postman.test@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Sep 2025 05:32:17 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 16,\n    \"email\": \"postman.test@example.com\",\n    \"created_at\": \"2025-09-03T11:02:17.581445+05:30\"\n}"
+				}
+			]
+		},
+		{
+			"name": "LoginUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"email\": \"postman.test@example.com\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"email\": \"postman.test@example.com\" }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Sep 2025 05:34:36 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "92"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 16,\n    \"email\": \"postman.test@example.com\",\n    \"created_at\": \"2025-09-03T11:02:17.581445+05:30\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Verify",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/verify/153",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"verify",
+						"153"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Verify",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/verify/153",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"verify",
+								"153"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Sep 2025 05:41:03 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"is_armstrong\": true,\n    \"message\": \"This is an Armstrong number.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Save",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Save",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"user_id\": 1, \"number\": 153 }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"save"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Sep 2025 05:42:50 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Number saved successfully.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GetUserNumbers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "GetUserNumbers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users/1/numbers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"1",
+								"numbers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Sep 2025 05:43:59 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "352"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 15,\n        \"number\": 153,\n        \"created_at\": \"2025-09-03T11:12:50.751246+05:30\"\n    },\n    {\n        \"id\": 6,\n        \"number\": 370,\n        \"created_at\": \"2025-09-02T16:35:17.362395+05:30\"\n    },\n    {\n        \"id\": 5,\n        \"number\": 153,\n        \"created_at\": \"2025-09-02T11:12:15.280603+05:30\"\n    },\n    {\n        \"id\": 3,\n        \"number\": 370,\n        \"created_at\": \"2025-09-02T09:32:27.865454+05:30\"\n    },\n    {\n        \"id\": 2,\n        \"number\": 153,\n        \"created_at\": \"2025-09-02T09:32:27.856543+05:30\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "GetAllUsers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users/all?page=1&limit=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"all"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Sep 2025 05:45:07 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "611"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 16,\n        \"email\": \"postman.test@example.com\",\n        \"created_at\": \"2025-09-03T11:02:17.581445+05:30\",\n        \"armstrong_numbers\": []\n    },\n    {\n        \"id\": 14,\n        \"email\": \"user8@gmail.com\",\n        \"created_at\": \"2025-09-02T22:01:55.981748+05:30\",\n        \"armstrong_numbers\": [\n            {\n                \"id\": 14,\n                \"number\": 153,\n                \"created_at\": \"2025-09-02T22:06:54.724445+05:30\"\n            }\n        ]\n    },\n    {\n        \"id\": 13,\n        \"email\": \"user7@gmail.com\",\n        \"created_at\": \"2025-09-02T21:59:54.649881+05:30\",\n        \"armstrong_numbers\": []\n    },\n    {\n        \"id\": 11,\n        \"email\": \"user4@gmail\",\n        \"created_at\": \"2025-09-02T21:58:37.517182+05:30\",\n        \"armstrong_numbers\": []\n    },\n    {\n        \"id\": 10,\n        \"email\": \"user6@gmail.com\",\n        \"created_at\": \"2025-09-02T21:58:14.444956+05:30\",\n        \"armstrong_numbers\": []\n    }\n]"
+				}
+			]
+		}
+	]
+}
