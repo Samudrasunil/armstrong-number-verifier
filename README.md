@@ -19,26 +19,37 @@ Setup and Installation
 Follow these steps to get your development environment set up.
 
 1. Clone the Repository
-   In terminal,run commands
-   git clone https://github.com/your-username/your-repository-name.git
-   cd your-repository-name
+   In terminal,run commands:
+   
+   git clone https://github.com/Samudrasunil/armstrong-number-verifier.git
+   
+   cd armstrong-number-verifier
 
 
 2. Set Up the PostgreSQL Database
    You need to create a database and the required tables.
   - Open pgAdmin4.
   - Create a database named cooee_db.
-    Query:
+    
+   - Query:
+     
     CREATE DATABASE cooee_db;
-  - Connect to your new database and run the following SQL query to create the tables:
+    
+  - Connect to your new database and run the following SQL query to create the tables.
+    
      Query:
+    
     -Users Table
+    
      CREATE TABLE users (
         user_id SERIAL PRIMARY KEY,
         email VARCHAR(255) UNIQUE NOT NULL,
         created_at TIMESTAMPTZ DEFAULT NOW()
      );
+
     -Armstrong Numbers Table
+
+
      CREATE TABLE armstrong_numbers (
         id SERIAL PRIMARY KEY,
         user_id INTEGER NOT NULL,
@@ -48,6 +59,8 @@ Follow these steps to get your development environment set up.
             FOREIGN KEY(user_id)
             REFERENCES users(user_id)
     );
+
+    
 3. Configure the Backend (Go)
 
   - Navigate to the backend directory.
