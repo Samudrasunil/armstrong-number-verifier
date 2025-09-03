@@ -12,7 +12,7 @@ Technical Stack
   - Backend: Go (Golang)
   - Database: PostgreSQL
   - Frontend: React
-  - 
+    
 
 Setup and Installation
 
@@ -41,7 +41,7 @@ Follow these steps to get your development environment set up.
     
     -Users Table
     
-     CREATE TABLE users (
+        CREATE TABLE users (
         user_id SERIAL PRIMARY KEY,
         email VARCHAR(255) UNIQUE NOT NULL,
         created_at TIMESTAMPTZ DEFAULT NOW()
@@ -50,7 +50,7 @@ Follow these steps to get your development environment set up.
     -Armstrong Numbers Table
 
 
-     CREATE TABLE armstrong_numbers (
+        CREATE TABLE armstrong_numbers (
         id SERIAL PRIMARY KEY,
         user_id INTEGER NOT NULL,
         number BIGINT NOT NULL,
